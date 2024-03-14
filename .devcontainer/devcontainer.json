@@ -1,0 +1,11 @@
+{
+    "image": "docker pull mcr.microsoft.com/devcontainers/java:dev-11-jdk-bookworm",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "vscjava.vscode-java-pack",
+                "Open-Liberty.liberty-dev-vscode-ext"
+            ]
+        }
+    }
+}
