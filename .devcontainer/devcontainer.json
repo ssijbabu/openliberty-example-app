@@ -1,11 +1,23 @@
 {
-    "image": "docker pull mcr.microsoft.com/devcontainers/java:dev-11-jdk-bookworm",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "customizations": {
         "vscode": {
             "extensions": [
                 "vscjava.vscode-java-pack",
-                "Open-Liberty.liberty-dev-vscode-ext"
+                "Open-Liberty.liberty-dev-vscode-ext",
+                "ms-azuretools.vscode-docker"
             ]
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/java": {
+            "jdkDistro": "ms",
+            "installMaven": true,
+            "version": "17"
+        },
+        "ghcr.io/devcontainers/features/docker-in-docker:2.10.1": {
+            "version": "latest",
+            "moby": true
         }
     }
 }
